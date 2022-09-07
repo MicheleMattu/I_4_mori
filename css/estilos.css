@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: cursive;
+	border: 5px solid red;
+}
+.red{
+	color: red;
+	text-align: center;
+}
+header{
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	border-bottom: 5px solid red;
+}
+
+header h1 a{
+	font-size: 3em;
+	text-decoration: none;
+	color: white;
+}
+header h1 span{
+	color: red;
+}
+header p{
+	font-size: 1.5em;
+	text-align: center;
+	color: white;
+}
+header p span{
+	color: red;
+}
+header img{
+	height: 200px;
+}
+header ul{
+	display: flex;
+	list-style: none;
+}
+header li a{
+	margin-left: 20px;
+	font-size: 2em;
+	text-decoration: none;
+	color: white;
+}
+/*Aquí termina la maquetacion del header principal y empieza la maquetacion de la section con clase "home*/
+.home{
+	height: calc(70vh - 15px);
+	display: grid;
+	grid-template-columns: repeat(2, calc(50% - 10px));
+	gap: 20px;
+	background-color: red;
+}
+.home img{
+	height: 200px;
+	width: 200px;
+}
+
+.home div{
+	background-color: white;
+	display: flex;
+	padding: 10px;
+}
+.texto{
+	text-align: center;
+	margin: 20px 0 ;
+	display: flex;
+	justify-content: center;
+	flex-direction:column;
+	width: 70%;
+}
