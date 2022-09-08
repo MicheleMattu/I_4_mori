@@ -24,7 +24,20 @@ header h1 a{
 	text-decoration: none;
 	color: white;
 }
+header h2{
+	text-align: center;
+}
+header h2 a{
+	text-align: center;
+	font-size: 2.5em;
+	text-decoration: none;
+	color: white;
+}
 header h1 span{
+	color: red;
+}
+
+header h2 span{
 	color: red;
 }
 header p{
@@ -48,6 +61,14 @@ header li a{
 	text-decoration: none;
 	color: white;
 }
+.carta nav li:not(:first-child) a{
+	font-size: 1.5em;
+}
+.carta	 nav li:nth-child(1) a{
+	font-size: 2em;
+	color: red;
+}
+
 /*Aquí termina la maquetacion del header principal y empieza la maquetacion de la section con clase "home*/
 .home{
 	height: calc(70vh - 15px);
