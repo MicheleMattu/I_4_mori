@@ -62,9 +62,10 @@ header li a{
 	color: white;
 }
 .carta{
-	display: none;
+	top: 0;
 	position: fixed;
 	width: calc(100% - 30px);
+	border-top: 5px solid red;
 }
 .carta nav li:not(:first-child) a{
 	font-size: 1.5em;
@@ -102,6 +103,7 @@ header li a{
 }
 /*Aquí empieza la maquetacion de la section carta.html*/
 .intro{
+	margin-top: 30vh;
 	padding: 5px 0;
 	display: flex;
 	flex-direction: column;
@@ -119,13 +121,20 @@ header li a{
 .separador{
 	padding: 5px;
 	display: flex;
-	font-size: 2em;
+	flex-direction: column;
+	align-items: center;
 	border-bottom: 5px solid red;
 	border-top: 5px solid red;
 	justify-content: center;
 	background-color: red;
 }
-.entrantes, .primeros, .segundos, .postres{
+.separador h3{
+	font-size: 2em;
+}
+.separador p{
+	font-size: 1.5em;
+}
+.entrantes, .primeros, .segundos, .postres, .bebidas{
 	text-align: center;
 	background-color: red;
 }
