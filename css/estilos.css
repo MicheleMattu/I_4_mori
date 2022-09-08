@@ -68,13 +68,19 @@ header li a{
 	border-top: 5px solid red;
 }
 .carta nav li:not(:first-child) a{
-	font-size: 1.5em;
-}
-.carta	 nav li:nth-child(1) a{
 	font-size: 2em;
+}
+.carta	nav li:nth-child(1) a{
+	font-size: 2.5em;
 	color: red;
 }
-
+.nosotros nav li:not(:nth-child(2)) a{
+	font-size: 2em;
+}
+.nosotros nav li:nth-child(2) a{
+	font-size: 2.5em;
+	color: red;
+}
 /*Aquí termina la maquetacion del header principal y empieza la maquetacion de la section con clase "home*/
 .home{
 	height: calc(70vh - 15px);
@@ -172,4 +178,32 @@ header li a{
 	width: 80%;
 	height: 195px;
 	margin-top: 5px;
+}
+.container{
+	height: calc(70vh - 15px);
+	display: flex;
+	}
+.bandera{
+	background: url("../img/bandera01.jpg");
+	width: 50%;
+	border: 5px solid black;
+}
+.contenido{
+	background-color: black;
+	border: 5px solid red;
+	}
+.contenido h1{
+	margin: 5px;
+	color: red;
+	font-size: 2.5em;
+	text-align: center;
+}
+.contenido p{
+	margin: 10px 25px;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+}
+.contenido p span{
+	color: red;
 }
