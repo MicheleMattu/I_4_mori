@@ -21,7 +21,12 @@ header{
 	padding: 10px;
 	border-bottom: 5px solid red;
 }
-
+header div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	}
 header h1 a{
 	font-size: 3em;
 	text-decoration: none;
@@ -108,6 +113,7 @@ header li a{
 .home div{
 	background-color: white;
 	display: flex;
+	align-items: center;
 	padding: 10px;
 }
 .texto{
@@ -252,15 +258,19 @@ form{
 	margin: auto;
 	display: flex;
 	align-items: center;
-	flex-wrap: wrap;
-	width: 80%;
+	flex-direction: row;
+	width: 100%;
+	flex-direction: column;
 }
 input{
-	width: 80%;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 70%;
 	margin-bottom: 10px;
 	margin: 15px auto;
 	height: 15px;
 	border: 5px solid red;
+	background-color: transparent;
 }
 .formulario{
 	width: 80%;
@@ -272,10 +282,12 @@ input[type="submit"]{
 	height: 30px;
 	border: 5px solid black;
 	text-align: center;
+	font-family: cursive;
 }
 input[type="text"]{
 	color: black;
 	text-align: center;
+	font-family: cursive;
 }
 .respuesta h3{
 	font-size: 2em;
@@ -287,6 +299,7 @@ input[type="text"]{
 	font-size: 1.2em;
 	margin-bottom: 15px;
 	padding: 0 15px;
+	text-align: center;
 }
 .abrir, .cerrar{
 	display: none;
@@ -295,12 +308,9 @@ input[type="text"]{
 
 /*RESPONSIVE*/
 
-/*Responsive, de los headers*/
 
 @media screen and ( max-width: 1360px ) and (min-width: 1225px){
-	.quitar{
-		display: none;
-	}	
+
 	header{
 		justify-content: space-evenly;
 	}
@@ -308,6 +318,12 @@ input[type="text"]{
 		margin-left: 15%;
 		font-size: 2em;
 		font-weight: normal;
+	}
+	nav ul{
+		border-radius: 10%;
+		border: 5px solid red;
+		flex-direction: column;
+		border-radius: 10%;
 	}
 	nav li a{
 		font-size: 2em;	
@@ -318,33 +334,43 @@ input[type="text"]{
 	.carta, .nosotros, .contactos{
 		justify-content: space-evenly;
 	}
-	.carta nav li:not(:first-child) a{
+	.carta nav li:nth-child(2) a{
 	font-size: 1.5em;
 	}
-	.carta	nav li:nth-child(1) a{
+	.carta	nav li:nth-child(2) a{
 		font-size: 2em;
 		color: red;
 	}
-	.nosotros nav li:not(:nth-child(2)) a{
+	.nosotros nav li:not(:nth-child(3)) a{
 		font-size: 1.5em;
 	}
-	.nosotros nav li:nth-child(2) a{
+	.nosotros nav li:nth-child(3) a{
 		font-size: 2em;
 		color: red;
 	}
-	.contactos nav li:not(:nth-child(3)) a{
+	.contactos nav li:not(:nth-child(4)) a{
 		font-size: 1.5em;
 	}
-	.contactos nav li:nth-child(3) a{
+	.contactos nav li:nth-child(4) a{
 		font-size: 2em;
 		color: red;
 	}
+	.home{
+		height: 100vh;
+		display: grid;
+		grid-template-columns: repeat(2, calc(50% - 10px));
+		gap: 10px;
+		background-color: red;
+	}
+	.home div{
+	background-color: white;
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
 }
 
 @media screen and (max-width: 1225px) and (min-width: 1150px){
-	.quitar{
-		display: none;
-	}	
 	header{
 		justify-content: space-evenly;
 	}
@@ -356,11 +382,17 @@ input[type="text"]{
 	header p{
 		font-size: 1em;
 	}
+		
 	nav li a{
 		font-size: 1.5em;	
 	}
 	nav li:not(:last-child) a{
 		margin-right: 20px;
+	}
+		nav	ul{
+		align-items: center;
+		flex-direction: column;
+		border: 5px solid red;
 	}
 	.carta, .nosotros, .contactos{
 		justify-content: space-evenly;
@@ -386,6 +418,19 @@ input[type="text"]{
 		font-size: 2em;
 		color: red;
 	}
+	.home{
+		height: 100vh;
+		display: grid;
+		grid-template-columns: repeat(2, calc(50% - 5px));
+		gap: 5px;
+		background-color: red;
+	}
+	.home div{
+	background-color: white;
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
 }
 
 @media screen and (max-width: 1150px) and (min-width: 1024px){
@@ -411,9 +456,12 @@ input[type="text"]{
 	}
 	nav li:not(:last-child) a{
 		margin-right: 20px;
-	}
-	nav ul{
+	}	
+	nav	ul{
+		align-items: center;
 		flex-direction: column;
+		border: 5px solid red;
+		border-radius: 10%;
 	}
 	.carta, .nosotros, .contactos{
 		justify-content: space-evenly;
@@ -439,6 +487,27 @@ input[type="text"]{
 		font-size: 2.5em;
 		color: red;
 	}
+		.home{
+		height: 100vh;
+		display: grid;
+		grid-template-columns: repeat(2, calc(50% - 5px));
+		gap: 5px;
+		background-color: red;
+	}
+	.home div{
+		background-color: white;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: 5px;
+	}
+	.home div img{
+		height: 170px;
+		width: 170px;
+	}
+	.texto{
+		font-size: 14px;
+}
 }
 @media screen and (max-width: 1024px) and (min-width: 900px){
 	.quitar{
@@ -463,8 +532,11 @@ input[type="text"]{
 	nav li:not(:last-child) a{
 		margin-right: 20px;
 	}
-	nav ul{
+	nav	ul{
+		align-items: center;
 		flex-direction: column;
+		border: 5px solid red;
+		border-radius: 10%;
 	}
 	.carta, .nosotros, .contactos{
 		justify-content: space-evenly;
@@ -490,13 +562,35 @@ input[type="text"]{
 		font-size: 2em;
 		color: red;
 	}
+	.home{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		border: 5px solid red;
+		gap: 10px;
+	}
+	.home div img{
+		height: 170px;
+		width: 170px;
+	}
+	.texto{
+		font-size: 14px;
+}
 }
 @media screen and (max-width: 900px) and (min-width: 800px){
+	body{
+		border: none;
+	}
 	.quitar{
 		display: none;
+	}
+	header img{
+		width: 150px;
+		height: 150px;
 	}	
 	header{
 		justify-content: space-evenly;
+		border: 5px solid red;	
 	}
 	header	h1 a{
 		font-size: 2.5em;
@@ -511,16 +605,19 @@ input[type="text"]{
 	nav li a{
 		font-size: 1.5em;	
 	}
-	nav ul{
+	nav	ul{
+		align-items: center;
 		flex-direction: column;
+		border: 5px solid red;
+		border-radius: 10%;
 	}
 	.carta, .nosotros, .contactos{
 		justify-content: space-evenly;
 	}
-	.carta nav li:not(:first-child) a{
+	.carta nav li:nth-child(2) a{
 	font-size: 1.5em;
 	}
-	.carta	nav li:nth-child(1) a{
+	.carta	nav li:nth-child(2) a{
 		font-size: 2em;
 		color: red;
 	}
@@ -538,22 +635,50 @@ input[type="text"]{
 		font-size: 2em;
 		color: red;
 	}
+	.home{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+		gap: 0;
+	}
+	.border{
+		border: 5px solid red;
+		border-top: none;
+	}
 }
 
 
-@media screen and (max-width: 800px){
 
+@media screen and (max-width: 800px){
+	body{
+		border: none;
+	}
+	.quitar{
+		display: none;
+	}	
+	header{
+		justify-content: space-evenly;
+		border: 5px solid red;
+	}
+	header	h1 a{
+		font-size: 2em;
+		font-weight: normal;
+	}
+	header	h2 a{
+		font-size: 2em;
+	}
 	nav{
 		position: fixed;
 		top: -100vh;
 		right: 0;
 		padding: 20px;
 		width: calc(100% - 10px);
-		height: 30vh;
+		height: 35vh;
 		background-color: black;
-		transition: 1.5s;
-
+		transition: 2s;
 	}
+
 	.home2{
 		display: block;
 	}
@@ -563,6 +688,7 @@ input[type="text"]{
 	nav	ul{
 		align-items: center;
 		flex-direction: column;
+		border: 5px solid red;
 	}
 	nav li:not(last-child){
 		margin-right: 0;
@@ -612,5 +738,134 @@ input[type="text"]{
 		}
 	.quitar{
 		display: none;
+	}
+	.home{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+		gap: 0;
+	}
+	.home img{
+		height: 150px;
+		width: 150px;
+	}
+	.border{
+		border: 5px solid red;
+		border-top: none;
+	}
+	.texto{
+		font-size: 14px;
+	}
+
+}
+
+@media screen and (max-width: 799px){
+	body{
+		border: none;
+	}
+	.quitar{
+		display: none;
+	}	
+	header{
+		justify-content: space-evenly;
+		border: 5px solid red;
+	}
+		header div{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	header img{
+		height: 100px;
+	}
+	header h1, header h2{
+		font-size: 1.2em;
+	}
+	header p{
+		font-size: 14px;
+	}
+	.home{
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+		gap: 0;
+	}
+	.border{
+		border: 5px solid red;
+		border-top: none;
+	}
+	.texto p{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 500px){
+	body{
+		border: none;
+	}
+	.quitar{
+		display: none;
+	}	
+	header{
+		justify-content: space-evenly;
+		border: 5px solid red;
+	}
+	header div{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	header img{
+		height: 100px;
+	}
+	.border{
+		border: 5px solid red;
+		border-top: none;
+	}
+	.home div{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 320px){
+	body{
+		border: none;
+	}
+	.quitar{
+		display: none;
+	}	
+	header{
+		justify-content: space-evenly;
+		border: 5px solid red;
+	}
+	header	h1 a{
+		text-align: center;
+		font-size: 1.2em;
+		font-weight: normal;
+	}
+	header	h2 a{
+		font-size: 1.2em;
+	}
+	header img{
+		height: 100px;
+	}
+	header h1, header h2{
+		font-size: 1.2em;
+	}
+	header p{
+		font-size: 14px;
+	}
+	.home div{
+		display: flex;
+		flex-direction: column;
+	
+	}
+	.border{
+		border: 5px solid red;
+		border-top: none;
 	}
 }

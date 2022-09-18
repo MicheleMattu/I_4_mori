@@ -1,6 +1,7 @@
 const navegacion = document.querySelector("nav");
 const botones = document.querySelectorAll(".abrir,.cerrar");
-const input = document.querySelector("input[type=submit");
+const formulario = document.querySelector("form");
+
 function toggleNavegacion(evento){
 	evento.preventDefault();
 	navegacion.classList.toggle("desplegado");
@@ -9,7 +10,8 @@ function toggleNavegacion(evento){
 botones.forEach(function(boton){
 	boton.addEventListener("click", toggleNavegacion);
 });
-	
-input.addEventListener("submit", function(){
-	input.preventDefault();
+/*formulario.addEventListener("submit",function(event){
+	event.preventDefault();
 });
+console.log(formulario);
+*/	
