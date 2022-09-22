@@ -1,0 +1,6 @@
+Qua mi serve mettere tutte le cose che devo inserire nel responsive:
+
+pagina "index.html":
+
+header h1, nav, ul, img.
+

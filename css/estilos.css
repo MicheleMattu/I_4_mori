@@ -13,7 +13,13 @@ body{
 .home2{
 	display: none;
 }
+.mori{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 header{
+	height: calc(25vh - 10px);
 	background-color: black;
 	display: flex;
 	align-items: center;
@@ -28,7 +34,7 @@ header div{
 	justify-content: center;
 	}
 header h1 a{
-	font-size: 3em;
+	font-size: 2.5em;
 	text-decoration: none;
 	color: white;
 }
@@ -49,7 +55,7 @@ header h2 span{
 	color: red;
 }
 header p{
-	font-size: 1.5em;
+	font-size: 20px;
 	text-align: center;
 	color: white;
 }
@@ -57,11 +63,12 @@ header p span{
 	color: red;
 }
 header img{
-	height: 200px;
-	border-radius: 50%;
+	height: 180px;
+	border-radius: 30%;
 }
 header ul{
 	display: flex;
+	flex-direction: column;
 	list-style: none;
 }
 header li a{
@@ -99,17 +106,17 @@ header li a{
 }
 /*Aquí termina la maquetacion del header principal y empieza la maquetacion de la section con clase "home*/
 .home{
-	height: calc(70vh - 15px);
-	display: grid;
-	grid-template-columns: repeat(2, calc(50% - 10px));
-	gap: 20px;
+	height: calc(75vh - 45px);
 	background-color: red;
-}
+	display: grid;
+	grid-template-columns: repeat(2, calc(50% - 5px));
+	gap: 10px;
+	}
+
 .home img{
 	height: 200px;
 	width: 200px;
 }
-
 .home div{
 	background-color: white;
 	display: flex;
@@ -118,8 +125,9 @@ header li a{
 }
 .texto{
 	text-align: center;
-	margin: 20px 0 ;
+	margin: 20px 0;
 	display: flex;
+	margin: 0 auto;
 	justify-content: center;
 	flex-direction:column;
 	width: 70%;
@@ -133,6 +141,7 @@ header li a{
 	justify-content: center;
 	align-items: center;
 	border-bottom: 5px solid red;
+	text-align: center;
 }
 .intro h2{
 	font-size: 2em;
@@ -193,12 +202,12 @@ header li a{
 	flex-direction: column;
 	justify-content: space-evenly;
 	text-align: center;
-	width: 80%;
+	width: 50%;
 	height: 195px;
 	margin-top: 5px;
 }
 .container{
-	height: calc(70vh - 15px);
+	/*height: calc(70vh - 15px);*/
 	display: flex;
 	}
 .bandera{
@@ -266,28 +275,24 @@ input{
 	-webkit-appearance: none;
 	appearance: none;
 	width: 70%;
-	margin-bottom: 10px;
-	margin: 15px auto;
+	margin: 10px auto;
 	height: 15px;
 	border: 5px solid red;
 	background-color: transparent;
+	
 }
 .formulario{
 	width: 80%;
 	display: flex;
 	flex-direction: column;
 }
-input[type="submit"]{
-	background-color: red;
-	height: 30px;
-	border: 5px solid black;
-	text-align: center;
-	font-family: cursive;
-}
 input[type="text"]{
 	color: black;
 	text-align: center;
 	font-family: cursive;
+}
+input:last-child{
+	background-color: red;
 }
 .respuesta h3{
 	font-size: 2em;
@@ -308,564 +313,72 @@ input[type="text"]{
 
 /*RESPONSIVE*/
 
-
-@media screen and ( max-width: 1360px ) and (min-width: 1225px){
-
+@media screen and (max-width: 1300px){
 	header{
-		justify-content: space-evenly;
+		height: calc(30vh - 10px);
 	}
-	header	h1 a{
-		margin-left: 15%;
-		font-size: 2em;
-		font-weight: normal;
-	}
-	nav ul{
-		border-radius: 10%;
-		border: 5px solid red;
-		flex-direction: column;
-		border-radius: 10%;
-	}
-	nav li a{
-		font-size: 2em;	
-	}
-	nav li:not(:last-child) a{
-		margin-right: 20px;
-	}
-	.carta, .nosotros, .contactos{
-		justify-content: space-evenly;
-	}
-	.carta nav li:nth-child(2) a{
-	font-size: 1.5em;
-	}
-	.carta	nav li:nth-child(2) a{
-		font-size: 2em;
-		color: red;
-	}
-	.nosotros nav li:not(:nth-child(3)) a{
-		font-size: 1.5em;
-	}
-	.nosotros nav li:nth-child(3) a{
-		font-size: 2em;
-		color: red;
-	}
-	.contactos nav li:not(:nth-child(4)) a{
-		font-size: 1.5em;
-	}
-	.contactos nav li:nth-child(4) a{
-		font-size: 2em;
-		color: red;
-	}
-	.home{
-		height: 100vh;
-		display: grid;
-		grid-template-columns: repeat(2, calc(50% - 10px));
-		gap: 10px;
-		background-color: red;
-	}
-	.home div{
-	background-color: white;
-	display: flex;
-	align-items: center;
-	padding: 5px;
-}
-}
-
-@media screen and (max-width: 1225px) and (min-width: 1150px){
-	header{
-		justify-content: space-evenly;
-	}
-	header	h1 a{
-		margin-left: 10%;
-		font-size: 1.5em;
-		font-weight: normal;
-	}
-	header p{
-		font-size: 1em;
-	}
-		
-	nav li a{
-		font-size: 1.5em;	
-	}
-	nav li:not(:last-child) a{
-		margin-right: 20px;
-	}
-		nav	ul{
-		align-items: center;
-		flex-direction: column;
-		border: 5px solid red;
-	}
-	.carta, .nosotros, .contactos{
-		justify-content: space-evenly;
-	}
-	.carta nav li:not(:first-child) a{
-	font-size: 1.5em;
-	}
-	.carta	nav li:nth-child(1) a{
-		font-size: 2em;
-		color: red;
-	}
-	.nosotros nav li:not(:nth-child(2)) a{
-		font-size: 1.5em;
-	}
-	.nosotros nav li:nth-child(2) a{
-		font-size: 2em;
-		color: red;
-	}
-	.contactos nav li:not(:nth-child(3)) a{
-		font-size: 1.5em;
-	}
-	.contactos nav li:nth-child(3) a{
-		font-size: 2em;
-		color: red;
-	}
-	.home{
-		height: 100vh;
-		display: grid;
-		grid-template-columns: repeat(2, calc(50% - 5px));
-		gap: 5px;
-		background-color: red;
-	}
-	.home div{
-	background-color: white;
-	display: flex;
-	align-items: center;
-	padding: 5px;
-}
-}
-
-@media screen and (max-width: 1150px) and (min-width: 1024px){
-	.quitar{
-		display: none;
-	}	
-	header{
-		justify-content: space-evenly;
-	}
-	header	h1 a{
-		font-size: 3em;
-		font-weight: normal;
-	}
-	header	h2 a{
-		font-size: 3em;
-		font-weight: normal;
-	}
-	header p{
-		font-size: 1.5em;
-	}
-	nav li a{
-		font-size: 2em;	
-	}
-	nav li:not(:last-child) a{
-		margin-right: 20px;
-	}	
-	nav	ul{
-		align-items: center;
-		flex-direction: column;
-		border: 5px solid red;
-		border-radius: 10%;
-	}
-	.carta, .nosotros, .contactos{
-		justify-content: space-evenly;
-	}
-	.carta nav li:not(:first-child) a{
-	font-size: 2em;
-	}
-	.carta	nav li:nth-child(1) a{
-		font-size: 2.5em;
-		color: red;
-	}
-	.nosotros nav li:not(:nth-child(2)) a{
-		font-size: 2em;
-	}
-	.nosotros nav li:nth-child(2) a{
-		font-size: 2.5em;
-		color: red;
-	}
-	.contactos nav li:not(:nth-child(3)) a{
-		font-size: 2em;
-	}
-	.contactos nav li:nth-child(3) a{
-		font-size: 2.5em;
-		color: red;
-	}
-		.home{
-		height: 100vh;
-		display: grid;
-		grid-template-columns: repeat(2, calc(50% - 5px));
-		gap: 5px;
-		background-color: red;
-	}
-	.home div{
-		background-color: white;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-		padding: 5px;
-	}
-	.home div img{
-		height: 170px;
-		width: 170px;
-	}
-	.texto{
-		font-size: 14px;
-}
-}
-@media screen and (max-width: 1024px) and (min-width: 900px){
-	.quitar{
-		display: none;
-	}	
-	header{
-		justify-content: space-evenly;
-	}
-	header	h1 a{
-		font-size: 2em;
-		font-weight: normal;
-	}
-	header	h2 a{
+	header h1 a{
 		font-size: 2.5em;
 	}
-	header p{
-		font-size: 1em;
-	}
-	nav li a{
-		font-size: 1.5em;	
-	}
-	nav li:not(:last-child) a{
-		margin-right: 20px;
-	}
-	nav	ul{
-		align-items: center;
-		flex-direction: column;
-		border: 5px solid red;
-		border-radius: 10%;
-	}
-	.carta, .nosotros, .contactos{
-		justify-content: space-evenly;
-	}
-	.carta nav li:not(:first-child) a{
-	font-size: 1.5em;
-	}
-	.carta	nav li:nth-child(1) a{
-		font-size: 2em;
-		color: red;
-	}
-	.nosotros nav li:not(:nth-child(2)) a{
-		font-size: 1.5em;
-	}
-	.nosotros nav li:nth-child(2) a{
-		font-size: 2em;
-		color: red;
-	}
-	.contactos nav li:not(:nth-child(3)) a{
-		font-size: 1.5em;
-	}
-	.contactos nav li:nth-child(3) a{
-		font-size: 2em;
-		color: red;
-	}
-	.home{
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		border: 5px solid red;
-		gap: 10px;
-	}
-	.home div img{
-		height: 170px;
-		width: 170px;
-	}
-	.texto{
-		font-size: 14px;
-}
-}
-@media screen and (max-width: 900px) and (min-width: 800px){
-	body{
-		border: none;
-	}
-	.quitar{
-		display: none;
-	}
-	header img{
-		width: 150px;
-		height: 150px;
-	}	
-	header{
-		justify-content: space-evenly;
-		border: 5px solid red;	
-	}
-	header	h1 a{
-		font-size: 2.5em;
-		font-weight: normal;
-	}
-	header	h2 a{
-		font-size: 2.5em;
-	}
-	header p{
-		font-size: 1em;
-	}
-	nav li a{
-		font-size: 1.5em;	
-	}
-	nav	ul{
-		align-items: center;
-		flex-direction: column;
-		border: 5px solid red;
-		border-radius: 10%;
-	}
-	.carta, .nosotros, .contactos{
-		justify-content: space-evenly;
-	}
-	.carta nav li:nth-child(2) a{
-	font-size: 1.5em;
-	}
-	.carta	nav li:nth-child(2) a{
-		font-size: 2em;
-		color: red;
-	}
-	.nosotros nav li:not(:nth-child(2)) a{
-		font-size: 1.5em;
-	}
-	.nosotros nav li:nth-child(2) a{
-		font-size: 2em;
-		color: red;
-	}
-	.contactos nav li:not(:nth-child(3)) a{
-		font-size: 1.5em;
-	}
-	.contactos nav li:nth-child(3) a{
-		font-size: 2em;
-		color: red;
-	}
-	.home{
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		background-color: white;
-		gap: 0;
-	}
-	.border{
-		border: 5px solid red;
-		border-top: none;
-	}
-}
-
-
-
-@media screen and (max-width: 800px){
-	body{
-		border: none;
-	}
-	.quitar{
-		display: none;
-	}	
-	header{
-		justify-content: space-evenly;
-		border: 5px solid red;
-	}
-	header	h1 a{
-		font-size: 2em;
-		font-weight: normal;
-	}
-	header	h2 a{
-		font-size: 2em;
-	}
-	nav{
-		position: fixed;
-		top: -100vh;
-		right: 0;
-		padding: 20px;
-		width: calc(100% - 10px);
-		height: 35vh;
-		background-color: black;
-		transition: 2s;
-	}
-
 	.home2{
 		display: block;
 	}
-	.desplegado{
-		top: 0;
-	}
-	nav	ul{
+	header div{
 		align-items: center;
+	}
+	.carta nav li:not(:nth-child(2)) a, .nosotros nav li:not(:nth-child(3)) a, .contactos nav li:not(:nth-child(4)) a{
+		font-size: 1.5em;
+	}
+	.carta nav li:nth-child(2) a, .nosotros nav li:nth-child(3) a, .contactos nav li:nth-child(4) a{
+		font-size: 3em;
+	}
+	header img{
+		height: 150px;
+	}
+	header ul{
 		flex-direction: column;
-		border: 5px solid red;
 	}
-	nav li:not(last-child){
-		margin-right: 0;
-	}
-	.carta nav li:nth-child(2) a{
-	font-size: 2em;
-	}
-	.carta	nav li:nth-child(2) a{
-		font-size: 2.5em;
-		color: red;
-	}
-	.nosotros nav li:not(:nth-child(3)) a{
-		font-size: 2em;
-	}
-	.nosotros nav li:nth-child(3) a{
-		font-size: 2.5em;
-		color: red;
-	}
-	.contactos nav li:not(:nth-child(4)) a{
-		font-size: 2em;
-	}
-	.contactos nav li:nth-child(4) a{
-		font-size: 2.5em;
-		color: red;
-	}
-	.cerrar{
-		display: block;
-		color: red;
-		position: absolute;
-		top: 20px;
-		right: 20px;
-		font-size: 2em;
-		text-decoration: none;
-	}
-	.abrir{
-		display: block;
-		width: 30px;
-		border: 1px solid red;
-		padding: 5px 5px 0;
-		border-radius: 5px;
-	}
-	.abrir span{
-		display: block;
-		height: 3px;
-		background-color: white;
-		margin-bottom: 5px;
-		}
-	.quitar{
-		display: none;
+	header li a{
+		font-size: 1.5em;
+		margin-left: 10px;
 	}
 	.home{
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
+		gap: 10px;
 		background-color: white;
-		gap: 0;
 	}
-	.home img{
-		height: 150px;
-		width: 150px;
-	}
-	.border{
-		border: 5px solid red;
-		border-top: none;
+	.home div{
+		padding: 5px;
 	}
 	.texto{
-		font-size: 14px;
-	}
-
-}
-
-@media screen and (max-width: 799px){
-	body{
-		border: none;
-	}
-	.quitar{
-		display: none;
-	}	
-	header{
-		justify-content: space-evenly;
-		border: 5px solid red;
-	}
-		header div{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-	header img{
-		height: 100px;
-	}
-	header h1, header h2{
-		font-size: 1.2em;
-	}
-	header p{
-		font-size: 14px;
-	}
-	.home{
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		background-color: white;
-		gap: 0;
-	}
-	.border{
-		border: 5px solid red;
-		border-top: none;
+		text-align: center;
+		margin: 0 10px;
 	}
 	.texto p{
-		font-size: 12px;
+		margin-top: 5px;
 	}
-}
-@media screen and (max-width: 500px){
-	body{
-		border: none;
-	}
-	.quitar{
-		display: none;
-	}	
-	header{
-		justify-content: space-evenly;
-		border: 5px solid red;
-	}
-	header div{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-	header img{
-		height: 100px;
-	}
-	.border{
-		border: 5px solid red;
-		border-top: none;
-	}
-	.home div{
-		display: flex;
-		flex-direction: column;
-	}
-}
+	/*Carta.html*/
 
-@media screen and (max-width: 320px){
-	body{
-		border: none;
+	.productos div h3{
+		font-size: 1.5em;
 	}
-	.quitar{
-		display: none;
-	}	
-	header{
-		justify-content: space-evenly;
-		border: 5px solid red;
-	}
-	header	h1 a{
-		text-align: center;
-		font-size: 1.2em;
-		font-weight: normal;
-	}
-	header	h2 a{
+	.productos div p{
 		font-size: 1.2em;
 	}
-	header img{
-		height: 100px;
+	.contenido p{
+		margin: 0;
+		font-size: 20px;
 	}
-	header h1, header h2{
+	/*Sobre_nosotros.html*/
+	.container{
+		height: 70vh;
+	}
+	/*contactos.html*/
+	.info h3, .respuesta h3{
 		font-size: 1.2em;
+		margin-bottom: 15px;
 	}
-	header p{
-		font-size: 14px;
-	}
-	.home div{
-		display: flex;
-		flex-direction: column;
-	
-	}
-	.border{
-		border: 5px solid red;
-		border-top: none;
+	.info p, .respuesta p{
+		font-size: 18px;
+		margin-bottom: 2px;
 	}
 }
