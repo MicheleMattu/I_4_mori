@@ -13,6 +13,9 @@ body{
 .home2{
 	display: none;
 }
+.carta .home2, .nosotros .home2, .contactos .home2{
+	display: block;
+}
 .mori{
 	display: flex;
 	flex-direction: column;
