@@ -60,7 +60,7 @@ header p{
 	font-size: 20px;
 	text-align: center;
 	color: white;
-}
+}r
 header p span{
 	color: red;
 }
@@ -214,7 +214,7 @@ header li a{
 	display: flex;
 	}
 .bandera{
-	background: url("../img/bandera01.jpg");
+	background: url("../img/otro/bandera01.jpg");
 	width: 50%;
 	border: 5px solid black;
 }
@@ -267,7 +267,7 @@ header li a{
 }
 
 form{
-	margin: auto;
+	margin: 10px auto;
 	display: flex;
 	align-items: center;
 	flex-direction: row;
@@ -384,7 +384,7 @@ input:last-child{
 		margin-bottom: 2px;
 	}
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1150px){
 	header{
 		height: calc(30vh - 10px);
 	}
@@ -454,6 +454,87 @@ input:last-child{
 	}
 	.bandera{
 		width: 70%;
+	}
+	/*contactos.html*/
+	.info h3, .respuesta h3{
+		font-size: 1.2em;
+		margin-bottom: 5px;
+	}
+	.info p, .respuesta p{
+		font-size: 16px;
+		margin-bottom: 2px;
+	}
+}
+@media screen and (max-width: 1024px){
+	header{
+		height: calc(30vh - 10px);
+	}
+	header h1 a{
+		font-size: 1.5em;
+	}
+	header h2 a{
+		font-size: 1.5em;
+	}
+	.carta nav li:not(:nth-child(2)) a, .nosotros nav li:not(:nth-child(3)) a, .contactos nav li:not(:nth-child(4)) a{
+		font-size: 1.2em;
+	}
+	.carta nav li:nth-child(2) a, .nosotros nav li:nth-child(3) a, .contactos nav li:nth-child(4) a{
+		font-size: 2em;
+	}
+	.home{
+		width: 100%;
+		gap: 5px;
+	}
+	.home div{
+		padding: 0px 5px;
+	}
+	.home img{
+		height: 150px;
+		width: 150px;
+	}
+	.texto{
+		text-align: center;
+		margin: 0 5px;
+	}
+	.texto p{
+		margin-top: 2px;
+		font-size: 12px;
+		text-align: justify;
+	}
+	/*Carta.html*/
+	.intro{
+		margin-top: 32vh;
+	}
+	.intro h2{
+		margin-top: 5px;
+		font-size: 2em;
+	}
+	.intro p{
+		font-size: 1.2em;
+	}
+	.separador h3{
+		font-size: 1.5em;
+	}
+	.productos div h3{
+		font-size: 1em;
+	}
+	.productos div p{
+		font-size: 16px;
+	}
+	.productos img{
+		height: 150px;
+		width: 150px;
+	}
+	/*Sobre_nosotros.html*/
+	.contenido p{
+		margin: 0;
+		font-size: 16px;
+	}
+	.container{
+		height: 70vh;
+	}
+	.bandera{
+		width: 100%;
 	}
 	/*contactos.html*/
 	.info h3, .respuesta h3{
@@ -728,6 +809,9 @@ input:last-child{
 		font-size: 12px;
 		margin-bottom: 15px;
 	}
+	.formulario{
+		margin: 10px auto;
+	}
 }
 @media screen and (max-width: 600px){
 
@@ -841,6 +925,77 @@ input:last-child{
 	.info ul{
 		list-style: none;
 	}
+	.info p{
+		margin-bottom: 10px;
+	}
+	.formulario h3{
+		font-size: 1em;
+		margin: 5px;
+	}
+	form{
+		margin: 0 auto;
+	}
+	input{
+		margin:  5px 0 ;
+	}
+	.info p{
+		font-size: 12px;
+		margin: 10px auto;
+		text-align: center;
+	}
+	.respuesta p{
+		font-size: 12px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 450px){
+
+	header{;
+		border: 5px solid red;
+		height: calc(20vh - 10px);
+	}
+	header h1 a{
+		font-size: 1em;
+	}
+	header img{
+		display: none;
+	}
+	header p{
+		font-size: 12px;
+	}
+	.carta h2 a, .nosotros h2 a, .contactos h2 a{
+		font-size: 1em;
+	}
+	.contenido h1{
+		font-size: 1em;
+	}
+	.contenido p{
+		margin: 0 10px;
+		font-size: 14px;
+	}
+	.home div {
+		flex-direction: column;
+		margin: 5px 0;
+	}
+	.bandera{
+		display: none;
+	}
+	/*contactos.html*/
+	.contatto{
+		flex-direction: column;
+		align-items: center;
+	}
+	.info h3, .respuesta h3{
+		font-size: 12px;
+		text-align: center;
+	}
+	.info, .respuesta{
+		width: calc(100% - 10px);
+	}
+	.info ul{
+		list-style: none;
+	}
 	.formulario h3{
 		font-size: 1em;
 		margin: 5px;
@@ -859,11 +1014,6 @@ input:last-child{
 	.respuesta p{
 		font-size: 12px;
 		text-align: center;
-	}
-}
-@media screen and (max-width: 400px){
-	header{
-		width: 1p;x
 	}
 }
 @media screen and (max-width: 320px){
@@ -888,7 +1038,6 @@ input:last-child{
 		font-size: 1em;
 	}
 	.contenido p{
-		margin: 0;
 		font-size: 12px;
 	}
 	.home div {
