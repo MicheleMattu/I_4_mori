@@ -281,7 +281,6 @@ header li a{
 	font-size: 2em;
 	margin: 20px 0;
 }
-
 form{
 	margin: 10px auto;
 	display: flex;
@@ -962,6 +961,7 @@ input:last-child{
 	.contatto{
 		flex-direction: column;
 		align-items: center;
+		height: auto;
 	}
 	.formulario h3{
 		font-size: 1.5em;
@@ -971,7 +971,11 @@ input:last-child{
 		margin: 0 auto;
 	}
 	input{
-		margin:  5px 0 ;
+		width: 80%;
+		margin: 10px auto;
+		height: 15px;
+		border: 5px solid red;
+		background-color: transparent;	
 	}
 	.info, .respuesta{
 		width: calc(100% - 20px);
