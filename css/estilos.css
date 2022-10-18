@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body{
-	font-family: cursive;
+	font-family: 'Dancing Script', cursive;
 	border: 5px solid red;
 }
 .red{
@@ -22,7 +22,7 @@ body{
 	justify-content: center;
 }
 header{
-	height: calc(30vh - 10px);
+	height: calc(30vh - 30px);
 	background-color: black;
 	display: flex;
 	align-items: center;
@@ -37,18 +37,16 @@ header div{
 	justify-content: center;
 	}
 header h1 a{
-	font-size: 2.5em;
+	font-size: 3em;
 	text-decoration: none;
 	color: white;
 }
 .carta h2 a, .nosotros h2 a, .contactos h2 a{
-		font-size: 3em;
-	}
-header h2 a{
+	font-size: 3em;
 	text-align: center;
 	text-decoration: none;
 	color: white;
-}
+	}
 header h1 span{
 	color: red;
 }
@@ -57,7 +55,7 @@ header h2 span{
 	color: red;
 }
 header p{
-	font-size: 20px;
+	font-size: 2em;
 	text-align: center;
 	color: white;
 }r
@@ -108,14 +106,15 @@ header li a{
 }
 /*Aquí termina la maquetacion del header principal y empieza la maquetacion de la section con clase "home*/
 .home{
-	height: calc(75vh - 45px);
-	background-color: red;
+	height: calc(70vh - 5px);
 	display: grid;
 	grid-template-columns: repeat(2, calc(50% - 5px));
 	gap: 10px;
 	background-color: red;
 	}
-
+.home h3{
+	margin-bottom: 10px;
+}
 .home img{
 	height: 200px;
 	width: 200px;
@@ -134,6 +133,12 @@ header li a{
 	justify-content: center;
 	flex-direction:column;
 	width: 70%;
+}
+.texto h3{
+	font-size: 2em;
+}
+.texto p{
+	font-size: 20px;
 }
 /*Aquí empieza la maquetacion de la section carta.html*/
 .intro{
@@ -193,7 +198,9 @@ header li a{
 	width: calc(100% - 10px);
 	background-color: white;
 }
-
+.productos img{
+	margin: 20px 0;
+}
 .productos div h3{
 	font-size: 2em;
 }
@@ -209,18 +216,20 @@ header li a{
 	height: 195px;
 	margin-top: 5px;
 }
+/*Maquetación pagina "sobre nosotros"*/
 .container{
-	/*height: calc(70vh - 15px);*/
+	height: calc(75vh - 45px);
 	display: flex;
 	}
 .bandera{
 	background: url("../img/otro/bandera01.jpg");
 	width: 50%;
-	border: 5px solid black;
 }
 .contenido{
+	height: calc(70vh - 10px);
 	background-color: black;
-	border: 5px solid red;
+	border-left: 5px solid red;
+	border-right: 5px solid red;
 	}
 .contenido h1{
 	margin: 5px;
@@ -232,37 +241,44 @@ header li a{
 	margin: 10px 25px;
 	color: white;
 	text-align: center;
-	font-size: 20px;
+	font-size: 22px;
 }
 .contenido p span{
 	color: red;
 }
+/*Maquetación pagina "contactos"*/
 .contatto{
 	display: flex;
-	height: calc(70vh - 15px);
+	height: calc(75vh - 45px);
 }
 .info, .respuesta{
 	background-color: black;
 	color: red;
 	width: 50%;
-	border: 5px solid red;
+	padding: 10px;
+}
+.info{
+	border-right: 5px solid red;
+}
+.respuesta{
+	border-left: 5px solid red;
 }
 .info h3{
-	font-size: 1.5em;
+	font-size: 2em;
 	margin-left: 10px;
 }
 .info p{
 	margin-left: 15px;
 	margin-bottom: 10px;
 	color: white;
-	font-size: 1.2em;
+	font-size: 1.5em;
 }
 .info li{
 	margin-left: 30px;
 }
 .formulario h3{
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 2em;
 	margin: 20px 0;
 }
 
@@ -277,9 +293,9 @@ form{
 input{
 	-webkit-appearance: none;
 	appearance: none;
-	width: 70%;
+	width: 80%;
 	margin: 10px auto;
-	height: 15px;
+	height: 25px;
 	border: 5px solid red;
 	background-color: transparent;
 	
@@ -304,7 +320,7 @@ input:last-child{
 }
 .respuesta p{
 	color: white;
-	font-size: 1.2em;
+	font-size: 1.5em;
 	margin-bottom: 15px;
 	padding: 0 15px;
 	text-align: center;
@@ -318,10 +334,13 @@ input:last-child{
 
 @media screen and (max-width: 1300px){
 	header{
-		height: calc(30vh - 10px);
+		height: calc(30vh - 30px);
 	}
 	header h1 a{
 		font-size: 2.5em;
+	}
+	header p{
+		font-size: 20px;
 	}
 	.home2{
 		display: block;
@@ -342,9 +361,10 @@ input:last-child{
 		flex-direction: column;
 	}
 	header li a{
-		font-size: 1.5em;
+		font-size: 2.5em;
 		margin-left: 10px;
 	}
+	/*Section pagina principal*/
 	.home{
 		gap: 10px;
 	}
@@ -356,6 +376,7 @@ input:last-child{
 		margin: 0 10px;
 	}
 	.texto p{
+		font-size: 18px;
 		margin-top: 5px;
 	}
 	/*Carta.html*/
@@ -365,10 +386,6 @@ input:last-child{
 	}
 	.productos div p{
 		font-size: 1.2em;
-	}
-	.contenido p{
-		margin: 0;
-		font-size: 20px;
 	}
 	/*Sobre_nosotros.html*/
 	.container{
@@ -383,8 +400,19 @@ input:last-child{
 		font-size: 18px;
 		margin-bottom: 2px;
 	}
+	input{
+		height: 20px;
+	}
+	/*Pagina "nosotros"*/
+	.contenido{
+		height: calc(70vh - 20px);
+		padding: 10px;
+	}
+	.contenido p{
+		font-size: 20px;
+	}
 }
-@media screen and (max-width: 1150px){
+@media screen and (max-width: 1150px) and (max-width: 1025){
 	header{
 		height: calc(30vh - 10px);
 	}
@@ -507,19 +535,20 @@ input:last-child{
 	}
 	.intro h2{
 		margin-top: 5px;
-		font-size: 2em;
+		font-size: 2.5em;
 	}
 	.intro p{
-		font-size: 1.2em;
+		font-size: 1.8em;
 	}
 	.separador h3{
-		font-size: 1.5em;
+		font-size: 2em;
 	}
 	.productos div h3{
-		font-size: 1em;
+		font-size: 2em;
+		margin-bottom: 10px;
 	}
 	.productos div p{
-		font-size: 16px;
+		font-size: 20px;
 	}
 	.productos img{
 		height: 150px;
@@ -528,7 +557,7 @@ input:last-child{
 	/*Sobre_nosotros.html*/
 	.contenido p{
 		margin: 0;
-		font-size: 16px;
+		font-size: 18px;
 	}
 	.container{
 		height: 70vh;
@@ -539,11 +568,14 @@ input:last-child{
 	/*contactos.html*/
 	.info h3, .respuesta h3{
 		font-size: 1.2em;
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 	}
 	.info p, .respuesta p{
-		font-size: 16px;
-		margin-bottom: 2px;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+	input{
+		height: 15px;
 	}
 }
 @media screen and (max-width: 900px){
@@ -613,14 +645,15 @@ input:last-child{
 		font-size: 1.2em;
 	}
 	.separador h3{
-		font-size: 1.5em;
+		font-size: 2em;
 	}
 	.productos div h3{
-		font-size: 1em;
+		font-size: 2em;
+		margin-bottom: 5px;
 	}
 	.productos div p{
-		font-size: 14px;
-		margin-bottom: 2px;
+		font-size: 20px;
+		margin-bottom: 5px;
 	}
 	.productos img{
 		height: 120px;
@@ -628,12 +661,12 @@ input:last-child{
 	}
 	/*contactos.html*/
 	.info h3, .respuesta h3{
-		font-size: 1em;
-		margin-bottom: 2px;
+		font-size: 1.5em;
+		margin-bottom: 5px;
 	}
 	.info p, .respuesta p{
-		font-size: 15px;
-		margin-bottom: 10px;
+		font-size: 16px;
+		margin-bottom: 15px;
 	}
 }
 @media screen and (max-width: 800px){
@@ -719,41 +752,43 @@ input:last-child{
 		font-size: 2em;
 	}
 	.intro p{
-		font-size: 1.2em;
+		font-size: 1.5em;
 	}
 	.separador h3{
 		font-size: 1.5em;
 	}
 	.productos div h3{
-		font-size: 1em;
+		font-size: 1.5em;
+		margin-bottom: 5px;
 	}
 	.productos div p{
-		font-size: 14px;
-		margin-bottom: 2px;
+		font-size: 1.2em;
+		margin-bottom: 5px;
 	}
 	.productos img{
 		height: 120px;
 		width: 120px;
 	}
+	/*pagina "nosotros"*/
 	.contenido p{
-		margin: 0;
-		font-size: 15px;
+		margin: 5px auto;
+		font-size: 16px;
+	}
+	.container{
+		height: 70vh;
 	}
 
 	/*contactos.html*/
 	.info h3, .respuesta h3{
-		font-size: 16px;
-		margin-bottom: 2px;
+		font-size: 1.2em;
+		margin-bottom: 5px;
 	}
 	.info p, .respuesta p{
-		font-size: 14px;
+		font-size: 16px;
 		margin-bottom: 10px;
 	}
 }
 @media screen and (max-width: 700px){
-	body{
-		border: none;
-	}
 	.home{
 		display: flex;
 		flex-direction: column;
@@ -799,15 +834,14 @@ input:last-child{
 		margin: 0;
 		font-size: 15px;
 	}
-
-	/*contactos.html*/
+/*contactos.html*/
 	.info h3, .respuesta h3{
-		font-size: 16px;
-		margin-bottom: 2px;
+		font-size: 1em;
+		margin-bottom: 5px;
 	}
 	.info p, .respuesta p{
-		font-size: 12px;
-		margin-bottom: 15px;
+		font-size: 14px;
+		margin-bottom: 8px;
 	}
 	.formulario{
 		margin: 10px auto;
@@ -839,28 +873,30 @@ input:last-child{
 		height: auto;
 	}
 	.productos div h3{
-		font-size: 1em;
+		font-size: 2em;
+		margin-bottom: 5px;
 	}
 	.productos div p{
-		font-size: 14px;
-		margin-bottom: 2px;
+		font-size: 1.2em;
+		margin-bottom: 5px;
 	}
 	.productos img{
 		height: 120px;
 		width: 120px;
 	}
+	/*pagina sobre nosotros*/
+	.contenido{
+		padding: 10px;
+	}
 	.contenido h1{
-		font-size: 1.5em;
+		font-size: 2em;
 	}
 	.contenido p{
-		margin: 0;
+		margin-top: 10px;
 		font-size: 14px;
 	}
 
 	/*contactos.html*/
-	.contatto{
-		height: auto;
-	}
 	.info h3, .respuesta h3{
 		font-size: 14px;
 		margin-bottom: 5px;
@@ -875,6 +911,17 @@ input:last-child{
 	form{
 		margin: 0;
 	}
+	.info h3, .respuesta h3{
+		font-size: 1em;
+		margin-bottom: 5px;
+	}
+	.info p, .respuesta p{
+		font-size: 14px;
+		margin-bottom: 8px;
+	}
+	.formulario{
+		margin: 10px auto;
+	}
 	.info p{
 		font-size: 12px;
 		margin-bottom: 20px;
@@ -888,12 +935,12 @@ input:last-child{
 	}
 }
 @media screen and (max-width: 500px){
-	.carta{
-		width: 100%;
-		}
 	header img{
 		height: 100px;
 	}
+	.carta{
+		width: 100%;
+		}
 	.intro h2{
 		margin-top: 5px;
 		font-size: 1.2em;
@@ -905,32 +952,20 @@ input:last-child{
 	.contenido h1{
 		font-size: 1em;
 	}
-	.contenido p{
-		margin: 0;
-		font-size: 12px;
+	.contenido{
+		padding: 10px;
 	}
-
+	.contenido p{
+		font-size: 14px;
+	}
 	/*contactos.html*/
 	.contatto{
 		flex-direction: column;
 		align-items: center;
 	}
-	.info h3, .respuesta h3{
-		font-size: 12px;
-		text-align: center;
-	}
-	.info, .respuesta{
-		width: calc(100% - 10px);
-	}
-	.info ul{
-		list-style: none;
-	}
-	.info p{
-		margin-bottom: 10px;
-	}
 	.formulario h3{
-		font-size: 1em;
-		margin: 5px;
+		font-size: 1.5em;
+		margin: 10px;
 	}
 	form{
 		margin: 0 auto;
@@ -938,21 +973,122 @@ input:last-child{
 	input{
 		margin:  5px 0 ;
 	}
+	.info, .respuesta{
+		width: calc(100% - 20px);
+		border-left: 5px solid red;
+		border-right: 5px solid red;
+	}
+	.info{
+		border-bottom: 5px solid red;
+	}
+	.respuesta{
+		border-top: 5px solid red;
+	}
 	.info p{
-		font-size: 12px;
+		font-size: 14px;
 		margin: 10px auto;
 		text-align: center;
 	}
+	.info h3, .respuesta h3{
+		font-size: 16px;
+		text-align: center;
+	}
+	.info ul{
+		list-style: none;
+	}
+	.info p{
+		margin-bottom: 10px;
+	}
 	.respuesta p{
-		font-size: 12px;
+		font-size: 14px;
 		text-align: center;
 	}
 }
 
 @media screen and (max-width: 450px){
 
-	header{;
-		border: 5px solid red;
+	header{
+		height: calc(20vh - 20px);
+	}
+	header h1 a{
+		font-size: 1em;
+	}
+	header img{
+		display: none;
+	}
+	header p{
+		font-size: 12px;
+	}
+	.carta h2 a, .nosotros h2 a, .contactos h2 a{
+		font-size: 1em;
+	}
+	/*nosotros*/
+	.contenido h1{
+		font-size: 2em;
+	}
+	.contenido{
+		border: none;
+	}
+	.contenido p{
+		padding: 5px 0;
+		font-size: 14px;
+	}
+	.home div {
+		flex-direction: column;
+		margin: 5px 0;
+	}
+	.bandera{
+		display: none;
+	}
+/*contactos.html*/
+	.contatto{
+		flex-direction: column;
+		align-items: center;
+	}
+	.formulario h3{
+		font-size: 1.5em;
+		margin: 10px;
+	}
+	form{
+		margin: 0 auto;
+	}
+	input{
+		margin:  5px 0 ;
+	}
+	.info, .respuesta{
+		width: calc(100% - 20px);
+		border-left: 5px solid red;
+		border-right: 5px solid red;
+	}
+	.info{
+		border-bottom: 5px solid red;
+	}
+	.respuesta{
+		border-top: 5px solid red;
+	}
+	.info p{
+		font-size: 14px;
+		margin: 10px auto;
+		text-align: center;
+	}
+	.info h3, .respuesta h3{
+		font-size: 16px;
+		text-align: center;
+	}
+	.info ul{
+		list-style: none;
+	}
+	.info p{
+		margin-bottom: 10px;
+	}
+	.respuesta p{
+		font-size: 14px;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 344px){
+
+	header{
 		height: calc(20vh - 10px);
 	}
 	header h1 a{
@@ -967,11 +1103,14 @@ input:last-child{
 	.carta h2 a, .nosotros h2 a, .contactos h2 a{
 		font-size: 1em;
 	}
+	/*sobre nosotros*/
+	.contenido{
+	}
 	.contenido h1{
-		font-size: 1em;
+		font-size: 1.5em;
 	}
 	.contenido p{
-		margin: 0 10px;
+		padding: 0;
 		font-size: 14px;
 	}
 	.home div {
@@ -991,73 +1130,7 @@ input:last-child{
 		text-align: center;
 	}
 	.info, .respuesta{
-		width: calc(100% - 10px);
-	}
-	.info ul{
-		list-style: none;
-	}
-	.formulario h3{
-		font-size: 1em;
-		margin: 5px;
-	}
-	form{
-		margin: 0 auto;
-	}
-	input{
-		margin:  5px 0 ;
-	}
-	.info p{
-		font-size: 12px;
-		margin: 2px;
-		text-align: center;
-	}
-	.respuesta p{
-		font-size: 12px;
-		text-align: center;
-	}
-}
-@media screen and (max-width: 320px){
-
-	header{
-		border: 5px solid red;
-		height: calc(20vh - 10px);
-	}
-	header h1 a{
-		font-size: 1em;
-	}
-	header img{
-		display: none;
-	}
-	header p{
-		font-size: 12px;
-	}
-	.carta h2 a, .nosotros h2 a, .contactos h2 a{
-		font-size: 1em;
-	}
-	.contenido h1{
-		font-size: 1em;
-	}
-	.contenido p{
-		font-size: 12px;
-	}
-	.home div {
-		flex-direction: column;
-		margin: 5px 0;
-	}
-	.bandera{
-		display: none;
-	}
-	/*contactos.html*/
-	.contatto{
-		flex-direction: column;
-		align-items: center;
-	}
-	.info h3, .respuesta h3{
-		font-size: 12px;
-		text-align: center;
-	}
-	.info, .respuesta{
-		width: calc(100% - 10px);
+		width: calc(100% - 20px);
 	}
 	.info ul{
 		list-style: none;
